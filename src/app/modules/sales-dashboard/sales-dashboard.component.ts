@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalesDashboardComponent implements OnInit {
 
-  chartOptions: any;
+  barChartOptions: any;
+  donutChartOptions: any;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.chartOptions = {
+    this.barChartOptions = {
       series: [
         {
           name: "Net Profit",
@@ -67,6 +68,14 @@ export class SalesDashboardComponent implements OnInit {
       fill: {
         opacity: 1
       }
+    };
+
+    this.donutChartOptions = {
+      series: [44, 55, 13, 43, 22],
+      chart: {
+        type: "donut"
+      },
+      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
     };
   }
 
