@@ -21,7 +21,7 @@
 
     <section class="m-5 p-5 bg-gray-50 rounded-lg shadow-md flex flex-col md:flex-row justify-between gap-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
-            <div class="text-center rounded-lg shadow-md bg-gray-200">
+            <div class="text-center rounded-lg shadow-md bg-gray-200 w-full">
                 <div>
                     <apx-chart
                         [series]="barChartOptions.series"
@@ -36,7 +36,7 @@
                         [xaxis]="barChartOptions.xaxis"
                     ></apx-chart>
                 </div>
-                <div class="text-lg">#Descrição</div>
+                <div class="text-lg">Vendas por Dia da Semana</div>
             </div>
             <div class="text-center rounded-lg shadow-md bg-gray-200">
                 <div id="donutChart">
@@ -44,9 +44,10 @@
                         [series]="donutChartOptions.series"
                         [chart]="donutChartOptions.chart"
                         [labels]="donutChartOptions.labels"
+                        [fill]="donutChartOptions.fill"
                     ></apx-chart>
                 </div>
-                <div class="text-lg">#Descrição</div>
+                <div class="text-lg">Vendas por Categoria</div>
             </div>
             <div class="text-center rounded-lg shadow-md bg-gray-200">
                 <div class="text-lg">#Descrição</div>

@@ -16,16 +16,8 @@ export class SalesDashboardComponent implements OnInit {
     this.barChartOptions = {
       series: [
         {
-          name: "Net Profit",
-          data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-        },
-        {
-          name: "Revenue",
-          data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-        },
-        {
-          name: "Free Cash Flow",
-          data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+          name: "Total de Vendas",
+          data: [44, 55, 57, 56, 61]
         }
       ],
       chart: {
@@ -49,33 +41,30 @@ export class SalesDashboardComponent implements OnInit {
       },
       xaxis: {
         categories: [
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct"
+          "Seg",
+          "Ter",
+          "Qua",
+          "Qui",
+          "Sex"
         ]
       },
       yaxis: {
         title: {
-          text: "$ (thousands)"
+          text: "Quantidade de Vendas"
         }
       },
       fill: {
+        colors: ['#f59b42'],
         opacity: 1
       }
     };
 
     this.donutChartOptions = {
-      series: [44, 55, 13, 43, 22],
+      series: [84, 24, 54, 64, 44],
       chart: {
         type: "donut"
       },
-      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+      labels: ["Computadores", "Móveis", "Jogos Digitais", "Periféricos", "Decoração"]
     };
   }
 
