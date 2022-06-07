@@ -6,7 +6,6 @@ import { SalesDashboardComponent } from './sales-dashboard.component';
 
 @NgModule({
   declarations: [
-    SalesDashboardComponent
   ],
   imports: [
     CommonModule
