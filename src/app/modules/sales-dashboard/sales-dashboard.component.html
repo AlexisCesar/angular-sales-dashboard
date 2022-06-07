@@ -5,12 +5,14 @@
             <a href="/dashboards/sales">SomeStoreLogo!</a>
         </nav>
     </header>
-    
+
     <section class="p-5 text-left bg-gray-50 shadow-md">
         <div class="navigation-tracker">
             <a href="#">Vendas</a>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                <path fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd" />
             </svg>
             <a href="/dashboards/sales">Dashboard</a>
         </div>
@@ -19,65 +21,67 @@
         </div>
     </section>
 
-    <section class="m-5 p-5 bg-gray-50 rounded-lg shadow-md flex flex-col md:flex-row justify-between gap-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
-
-            <!--Bar chart-->
-            <div class="text-center rounded-lg shadow-md bg-gray-200">
-                <div class="max-w-md md:max-w-lg">
-                    <apx-chart
-                        [series]="barChartOptions.series"
-                        [chart]="barChartOptions.chart"
-                        [dataLabels]="barChartOptions.dataLabels"
-                        [plotOptions]="barChartOptions.plotOptions"
-                        [yaxis]="barChartOptions.yaxis"
-                        [legend]="barChartOptions.legend"
-                        [fill]="barChartOptions.fill"
-                        [stroke]="barChartOptions.stroke"
-                        [tooltip]="barChartOptions.tooltip"
-                        [xaxis]="barChartOptions.xaxis"
-                    ></apx-chart>
-                </div>
-                <div class="text-lg">Vendas por Dia da Semana</div>
-            </div>
-
-            <!--Donut chart-->
-            <div class="text-center rounded-lg shadow-md bg-gray-200">
-                <div class="max-w-md md:max-w-lg">
-                    <apx-chart
-                        [series]="donutChartOptions.series"
-                        [chart]="donutChartOptions.chart"
-                        [labels]="donutChartOptions.labels"
-                        [fill]="donutChartOptions.fill"
-                    ></apx-chart>
-                </div>
-                <div class="text-lg">Vendas por Categoria</div>
-            </div>
-
-            <!--Informative cards-->
-            <div class="text-center rounded-lg shadow-md bg-gray-200">
-                <div class="grid grid-cols-2 gap-3 m-5">
-                    <div *ngFor="let element of informativeCards" class="text-center rounded-lg shadow-md bg-gray-100 max-w-sm p-3">
-                        <div class="text-6xl text-yellow-500">{{element.value}}</div>
-                        <div>{{element.title}}</div>
-                    </div>
-                </div>
-                <div class="text-lg">Cartões Informativos</div>
-            </div>
-
-
-            <div class="text-center rounded-lg shadow-md bg-gray-200">
-                <div class="text-lg">#Descrição</div>
-            </div>
-
-
-            <div class="text-center rounded-lg shadow-md bg-gray-200">
-                <div class="text-lg">#Descrição</div>
+    <section class="m-5 p-5 bg-gray-50 rounded-lg shadow-md">
+        <div class="flex justify-center mb-3">
+            <div class="text-3xl text-gray-900">
+                Total Vendido: R$473.283,53
             </div>
         </div>
-        <div>
-            <div class="text-center rounded-lg shadow-md bg-gray-200 m-3">
-                <div class="text-lg">#Legend</div>
+
+        <div class="flex justify-center mb-3">
+            <div class="w-72 mt-2">
+                <mat-progress-bar mode="determinate" value="86"></mat-progress-bar>
+            </div>
+            <div class="text-gray-900 ml-2">
+                R$550.000,00
+            </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row justify-between gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
+
+                <!--Bar chart-->
+                <div class="text-center rounded-lg shadow-md bg-gray-200">
+                    <div class="max-w-md md:max-w-lg">
+                        <apx-chart [series]="barChartOptions.series" [chart]="barChartOptions.chart"
+                            [dataLabels]="barChartOptions.dataLabels" [plotOptions]="barChartOptions.plotOptions"
+                            [yaxis]="barChartOptions.yaxis" [legend]="barChartOptions.legend"
+                            [fill]="barChartOptions.fill" [stroke]="barChartOptions.stroke"
+                            [tooltip]="barChartOptions.tooltip" [xaxis]="barChartOptions.xaxis"></apx-chart>
+                    </div>
+                    <div class="text-lg">Vendas por Dia da Semana</div>
+                </div>
+
+                <!--Donut chart-->
+                <div class="text-center rounded-lg shadow-md bg-gray-200">
+                    <div class="max-w-md md:max-w-lg">
+                        <apx-chart [series]="donutChartOptions.series" [chart]="donutChartOptions.chart"
+                            [labels]="donutChartOptions.labels" [fill]="donutChartOptions.fill"></apx-chart>
+                    </div>
+                    <div class="text-lg">Vendas por Categoria</div>
+                </div>
+
+                <!--Informative cards-->
+                <div class="text-center rounded-lg shadow-md bg-gray-200">
+                    <div class="grid grid-cols-2 gap-3 m-5">
+                        <div *ngFor="let element of informativeCards"
+                            class="text-center rounded-lg shadow-md bg-gray-100 max-w-sm p-3">
+                            <div class="text-6xl text-yellow-500">{{element.value}}</div>
+                            <div>{{element.title}}</div>
+                        </div>
+                    </div>
+                    <div class="text-lg">Cartões Informativos</div>
+                </div>
+
+
+                <div class="text-center rounded-lg shadow-md bg-gray-200">
+                    <div class="text-lg">#Descrição</div>
+                </div>
+
+
+                <div class="text-center rounded-lg shadow-md bg-gray-200">
+                    <div class="text-lg">#Descrição</div>
+                </div>
             </div>
         </div>
     </section>

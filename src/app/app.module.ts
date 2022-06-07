@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SalesDashboardComponent } from './modules/sales-dashboard/sales-dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
