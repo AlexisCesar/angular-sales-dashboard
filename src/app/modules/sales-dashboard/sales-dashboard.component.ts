@@ -9,10 +9,17 @@ export class SalesDashboardComponent implements OnInit {
 
   barChartOptions: any;
   donutChartOptions: any;
+  informativeCards: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.prepareBarChart();
+    this.prepareDonutChart();
+    this.prepareInformativeCards();
+  }
+
+  prepareBarChart(): void {
     this.barChartOptions = {
       series: [
         {
@@ -58,7 +65,9 @@ export class SalesDashboardComponent implements OnInit {
         opacity: 1
       }
     };
+  }
 
+  prepareDonutChart(): void {
     this.donutChartOptions = {
       series: [84, 24, 54, 64, 44],
       chart: {
@@ -66,6 +75,15 @@ export class SalesDashboardComponent implements OnInit {
       },
       labels: ["Computadores", "Móveis", "Jogos Digitais", "Periféricos", "Decoração"]
     };
+  }
+
+  prepareInformativeCards(): void {
+    this.informativeCards = [
+      { title: "À Vista", value: 40 },
+      { title: "Online", value: 75 },
+      { title: "Devoluções", value: 20 },
+      { title: "Para Empresas", value: 80 },
+    ];
   }
 
 }

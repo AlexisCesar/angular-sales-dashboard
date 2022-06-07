@@ -21,8 +21,10 @@
 
     <section class="m-5 p-5 bg-gray-50 rounded-lg shadow-md flex flex-col md:flex-row justify-between gap-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
-            <div class="text-center rounded-lg shadow-md bg-gray-200 w-full">
-                <div>
+
+            <!--Bar chart-->
+            <div class="text-center rounded-lg shadow-md bg-gray-200">
+                <div class="max-w-md md:max-w-lg">
                     <apx-chart
                         [series]="barChartOptions.series"
                         [chart]="barChartOptions.chart"
@@ -38,8 +40,10 @@
                 </div>
                 <div class="text-lg">Vendas por Dia da Semana</div>
             </div>
+
+            <!--Donut chart-->
             <div class="text-center rounded-lg shadow-md bg-gray-200">
-                <div id="donutChart">
+                <div class="max-w-md md:max-w-lg">
                     <apx-chart
                         [series]="donutChartOptions.series"
                         [chart]="donutChartOptions.chart"
@@ -49,12 +53,24 @@
                 </div>
                 <div class="text-lg">Vendas por Categoria</div>
             </div>
+
+            <!--Informative cards-->
+            <div class="text-center rounded-lg shadow-md bg-gray-200">
+                <div class="grid grid-cols-2 gap-3 m-5">
+                    <div *ngFor="let element of informativeCards" class="text-center rounded-lg shadow-md bg-gray-100 max-w-sm p-3">
+                        <div class="text-6xl text-yellow-500">{{element.value}}</div>
+                        <div>{{element.title}}</div>
+                    </div>
+                </div>
+                <div class="text-lg">Cartões Informativos</div>
+            </div>
+
+
             <div class="text-center rounded-lg shadow-md bg-gray-200">
                 <div class="text-lg">#Descrição</div>
             </div>
-            <div class="text-center rounded-lg shadow-md bg-gray-200">
-                <div class="text-lg">#Descrição</div>
-            </div>
+
+
             <div class="text-center rounded-lg shadow-md bg-gray-200">
                 <div class="text-lg">#Descrição</div>
             </div>
